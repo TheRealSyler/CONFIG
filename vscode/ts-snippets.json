@@ -1,0 +1,45 @@
+{
+  "Print to console": {
+    "prefix": "cl",
+    "body": ["console.log('$1')$2"],
+    "description": "Log output to console"
+  },
+  "Warn  console": {
+    "prefix": "§cw",
+    "body": ["console.warn('$1')$2"],
+    "description": "Warn console"
+  },
+  "import statement": {
+    "prefix": "§imp",
+    "body": ["import { $2 } from '$1'"]
+  },
+  "export function": {
+    "prefix": "§exf",
+    "body": ["export function ${1:name} (${2:args})$3 {", "\t$0", "}"]
+  },
+  "export class": {
+    "prefix": "§exc",
+    "body": ["export class ${1:name} {", "\t$0", "}"]
+  },
+  "export interface": {
+    "prefix": "§exi",
+    "body": ["export interface ${1:name} {", "\t$0", "}"]
+  },
+  "export const": {
+    "prefix": "§exv",
+    "body": ["export const ${1:name} = $2"]
+  },
+  "setup logger": {
+    "prefix": "§loggerSetup",
+    "body": [
+      "import { Logger, LoggerType } from '@sorg/log';",
+      "export const logger = new Logger<{",
+      "\t${1:loggerName}: LoggerType;",
+      "}>({",
+      "\t${1:loggerName}: {",
+      "\t\t$0",
+      "\t}",
+      "});"
+    ]
+  }
+}
